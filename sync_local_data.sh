@@ -1,4 +1,5 @@
 #!/bin/sh
 
-# sync local data to external hard drive with compression
-rsync -avz --progress ~/local_data/ /Volumes/local_data_shuttle/
+# sync local_data folder to external hard drive (within same folder name)
+# use --delete-before to ensure removed src files are deleted
+rsync -avzh --progress --delete-after ~/local_data/ /Volumes/local_data_shuttle/local_data/
